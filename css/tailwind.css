@@ -1,0 +1,502 @@
+/* Ample Grace Tours - Gracious Minimalism Design System */
+/* Generated: 2025-12-07 */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* Pearl of Africa Palette - Color Specifications */
+        --color-primary: #2D5016;
+        /* Deep forest green - Uganda's natural foundation */
+        --color-primary-dark: #1F3810;
+        /* Darker forest green variant */
+        --color-primary-light: #3D6B1F;
+        /* Lighter forest green variant */
+
+        --color-secondary: #8B4513;
+        /* Rich earth brown - grounding and warmth */
+        --color-secondary-dark: #6B340F;
+        /* Darker earth brown variant */
+        --color-secondary-light: #A0522D;
+        /* Lighter earth brown variant */
+
+        --color-accent: #DAA520;
+        /* Golden rod - African sunlight moments */
+        --color-accent-dark: #B8860B;
+        /* Darker golden variant */
+        --color-accent-light: #F0E68C;
+        /* Lighter golden variant */
+
+        --color-background: #FEFEFE;
+        /* Pure canvas - content breathing room */
+        --color-surface: #F8F6F3;
+        /* Warm neutral - subtle content separation */
+        --color-surface-hover: #F0EDE8;
+        /* Surface hover state */
+
+        --color-text-primary: #1A1A1A;
+        /* Clear readability - professional confidence */
+        --color-text-secondary: #666666;
+        /* Supporting information - clear hierarchy */
+        --color-text-tertiary: #999999;
+        /* Tertiary text for subtle elements */
+
+        --color-success: #228B22;
+        /* Natural green - positive confirmation */
+        --color-success-light: #90EE90;
+        /* Light success variant */
+
+        --color-warning: #FF8C00;
+        /* Warm orange - helpful attention */
+        --color-warning-light: #FFD700;
+        /* Light warning variant */
+
+        --color-error: #CD5C5C;
+        /* Gentle red - supportive correction */
+        --color-error-light: #F08080;
+        /* Light error variant */
+
+        --color-border: #E5E5E5;
+        /* Barely perceptible borders */
+        --color-border-focus: #2D5016;
+        /* Focus state borders */
+
+        /* Shadow System - Subtle depth for elevated surfaces */
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+        --shadow-base: 0 4px 20px rgba(0, 0, 0, 0.08);
+        --shadow-md: 0 6px 24px rgba(0, 0, 0, 0.10);
+        --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+        --shadow-interactive: 0 8px 30px rgba(45, 80, 22, 0.15);
+
+        /* Animation Timing - Natural breathing motion */
+        --transition-fast: 300ms ease-out;
+        --transition-base: 400ms ease-out;
+        --transition-slow: 600ms ease-out;
+
+        /* Spacing Scale - Generous white space */
+        --spacing-xs: 0.5rem;
+        --spacing-sm: 1rem;
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 3rem;
+        --spacing-2xl: 4rem;
+        --spacing-3xl: 6rem;
+
+        /* Border Radius - Minimal approach */
+        --radius-sm: 4px;
+        --radius-base: 8px;
+        --radius-md: 12px;
+        --radius-lg: 16px;
+        --radius-full: 9999px;
+    }
+
+    /* Base Typography Settings */
+    html {
+        font-size: 16px;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply font-body text-text-primary bg-background antialiased;
+        line-height: 1.6;
+        letter-spacing: 0.01em;
+    }
+
+    /* Heading Styles - Playfair Display */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-headline text-text-primary;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
+    }
+
+    h1 {
+        @apply text-5xl md:text-6xl lg:text-7xl font-bold;
+        margin-bottom: var(--spacing-lg);
+    }
+
+    h2 {
+        @apply text-4xl md:text-5xl lg:text-6xl font-semibold;
+        margin-bottom: var(--spacing-md);
+    }
+
+    h3 {
+        @apply text-3xl md:text-4xl lg:text-5xl font-semibold;
+        margin-bottom: var(--spacing-md);
+    }
+
+    h4 {
+        @apply text-2xl md:text-3xl font-semibold;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    h5 {
+        @apply text-xl md:text-2xl font-medium;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    h6 {
+        @apply text-lg md:text-xl font-medium;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    /* Body Text - Source Sans Pro */
+    p {
+        @apply text-base md:text-lg text-text-secondary mb-4;
+        line-height: 1.7;
+    }
+
+    /* Link Styles */
+    a {
+        @apply text-primary transition-colors duration-300;
+        text-decoration: none;
+    }
+
+    a:hover {
+        @apply text-primary-light;
+    }
+
+    /* Focus States */
+    *:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+    }
+}
+
+@layer components {
+
+    /* Button Components - Montserrat */
+    .btn {
+        @apply font-cta font-medium px-6 py-3 rounded-base transition-all duration-300;
+        letter-spacing: 0.02em;
+        cursor: pointer;
+        border: none;
+    }
+
+    .btn-primary {
+        @apply bg-primary text-white;
+        box-shadow: var(--shadow-base);
+    }
+
+    .btn-primary:hover {
+        @apply bg-primary-light;
+        box-shadow: var(--shadow-interactive);
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        @apply bg-secondary text-white;
+        box-shadow: var(--shadow-base);
+    }
+
+    .btn-secondary:hover {
+        @apply bg-secondary-light;
+        box-shadow: var(--shadow-interactive);
+        transform: translateY(-2px);
+    }
+
+    .btn-accent {
+        @apply bg-accent text-text-primary;
+        box-shadow: var(--shadow-base);
+    }
+
+    .btn-accent:hover {
+        @apply bg-accent-dark text-white;
+        box-shadow: var(--shadow-interactive);
+        transform: translateY(-2px);
+    }
+
+    .btn-outline {
+        @apply bg-transparent border-2 border-primary text-primary;
+    }
+
+    .btn-outline:hover {
+        @apply bg-primary text-white;
+    }
+
+    /* Card Components */
+    .card {
+        @apply bg-white rounded-md p-6;
+        box-shadow: var(--shadow-base);
+        transition: all var(--transition-base);
+    }
+
+    .card:hover {
+        box-shadow: var(--shadow-md);
+        transform: translateY(-4px);
+    }
+
+    .card-elevated {
+        @apply bg-white rounded-lg p-8;
+        box-shadow: var(--shadow-md);
+    }
+
+    /* Form Elements */
+    .form-input {
+        @apply w-full px-4 py-3 rounded-base border border-border bg-white text-text-primary;
+        transition: all var(--transition-fast);
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .form-input:focus {
+        @apply border-border-focus;
+        box-shadow: 0 0 0 3px rgba(45, 80, 22, 0.1);
+    }
+
+    .form-label {
+        @apply block text-sm font-medium text-text-primary mb-2;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+
+    .form-error {
+        @apply text-error text-sm mt-1;
+    }
+
+    /* Section Containers */
+    .section {
+        @apply py-16 md:py-24 lg:py-32;
+    }
+
+    .section-surface {
+        @apply bg-surface;
+    }
+
+    .container-custom {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    /* Testimonial Styles - Crimson Text */
+    .testimonial-quote {
+        @apply font-accent text-xl md:text-2xl text-text-primary italic;
+        line-height: 1.6;
+    }
+
+    .testimonial-author {
+        @apply font-accent text-lg text-text-secondary;
+    }
+
+    /* Hero Section */
+    .hero-title {
+        @apply font-headline text-5xl md:text-6xl lg:text-7xl font-bold text-white;
+        text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+        line-height: 1.1;
+    }
+
+    .hero-subtitle {
+        @apply font-body text-xl md:text-2xl text-white;
+        text-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Navigation */
+    .nav-link {
+        @apply font-body font-medium text-text-primary transition-colors duration-300;
+        letter-spacing: 0.01em;
+    }
+
+    .nav-link:hover {
+        @apply text-primary;
+    }
+
+    .nav-link-active {
+        @apply text-primary;
+    }
+
+    /* Utility Classes */
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    .gracious-spacing {
+        margin-bottom: var(--spacing-xl);
+    }
+
+    .breathing-room {
+        padding: var(--spacing-2xl) 0;
+    }
+}
+
+@layer utilities {
+
+    /* Animation Utilities */
+    .transition-graceful {
+        transition: all var(--transition-base);
+    }
+
+    .transition-gentle {
+        transition: all var(--transition-fast);
+    }
+
+    .transition-reveal {
+        transition: all var(--transition-slow);
+    }
+
+    /* Parallax Effect */
+    .parallax-subtle {
+        transform: translateZ(0);
+        will-change: transform;
+    }
+
+    /* Scroll Reveal */
+    .scroll-reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity var(--transition-slow), transform var(--transition-slow);
+    }
+
+    .scroll-reveal.revealed {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Image Overlay */
+    .image-overlay {
+        position: relative;
+    }
+
+    .image-overlay::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
+    }
+
+    /* Aspect Ratios */
+    .aspect-hero {
+        aspect-ratio: 16 / 9;
+    }
+
+    .aspect-card {
+        aspect-ratio: 4 / 3;
+    }
+
+    .aspect-portrait {
+        aspect-ratio: 3 / 4;
+    }
+
+    /* Text Gradients */
+    .text-gradient-primary {
+        background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .text-gradient-accent {
+        background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+}
+
+/* Responsive Typography Adjustments */
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        @apply bg-white text-black;
+    }
+
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    :root {
+        --color-border: #000000;
+        --shadow-base: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.contact-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.contact-section h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.contact-section p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.contact-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    min-width: 300px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.contact-table th,
+.contact-table td {
+    padding: 15px 20px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.contact-table th {
+    background-color: #0077cc;
+    color: #ffffff;
+}
+
+.contact-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.contact-table a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-table a:hover {
+    text-decoration: underline;
+}

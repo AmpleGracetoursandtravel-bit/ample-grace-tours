@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Plan your perfect Uganda safari adventure with our interactive trip planner. Customize your itinerary, compare options, and get instant quotes for your dream African experience.">
+    <meta name="keywords"
+        content="Uganda trip planner, safari customization, travel itinerary builder, Uganda tour packages, personalized safari">
+    <title>Custom Trip Planner - Design Your Perfect Uganda Adventure | Ample Grace Tours</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+
+    <script type="module" async
+        src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Famplegrac2793back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.12"></script>
+    <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2"></script>
+</head>
+
+<body class="bg-background">
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-base transition-all duration-300" id="mainHeader">
+        <nav class="container-custom">
+            <div class="flex items-center justify-between py-4">
+                <!-- Logo -->
+                <!-- Homepage link -->
+                <a href="homepage.html">
+                    <div class="logo-container">
+                        <img src="../images/Ample Grace Logo-04.jpg" alt="Ample Grace Tours & Travel Logo"
+                            style="width:50px; height:10;">
+                    </div>
+
+                </a>
+                <a href="homepage.html" class="flex items-center gap-3">
+                    <path d="M24 8C15.163 8 8 15.163 8 24C8 32.837 15.163 40 24 40C32.837 40 40 32.837 40 24C40 15.163 32.837 8 24 8ZM24 12C30.627 12 36 17.373 36 24C36 30.627 30.627 36 24 36C17.373 36 12 30.627
+                                        
+                                        
+                                    
+                                        <path d=" M20 24H28V30C28 31.105 26.209 32 24 32C21.791 32 20 31.105 20 30V24Z"
+                        fill="#8B4513" />
+
+                    <div>
+                        <h1 class="font-headline text-2xl font-bold text-primary">Ample Grace</h1>
+                        <p class="font-body text-xs text-text-secondary">Tours & Safaris</p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="homepage.html" class="nav-link">Home</a>
+                    <div class="relative group">
+                        <button class="nav-link flex items-center gap-1">
+                            Experiences
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M4 6L8 10L12 6H4Z" />
+                            </svg>
+                        </button>
+                        <div
+                            class="absolute top-full left-0 mt-2 w-64 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <div class="p-4 space-y-2">
+                                <a href="safari_experiences.html"
+                                    class="block px-4 py-2 rounded hover:bg-surface transition-colors">
+                                    <div class="font-medium text-text-primary">Safari Experiences</div>
+                                    <div class="text-sm text-text-secondary">Wildlife & Nature Adventures</div>
+                                </a>
+                                <a href="cultural_tours.html"
+                                    class="block px-4 py-2 rounded hover:bg-surface transition-colors">
+                                    <div class="font-medium text-text-primary">Cultural Tours</div>
+                                    <div class="text-sm text-text-secondary">Authentic Local Encounters</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="custom_trip_planner.html" class="nav-link nav-link-active">Plan Your Trip</a>
+                    <a href="about_our_story.html" class="nav-link">Our Story</a>
+                    <a href="guest_adventures.html" class="nav-link">Guest Stories</a>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <div class="flex items-center gap-2 text-sm text-text-secondary">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M10 2C5.589 2 2 5.589 2 10C2 14.411 5.589 18 10 18C14.411 18 18 14.411 18 10C18 5.589 14.411 2 10 2ZM10 4C13.309 4 16 6.691 16 10C16 13.309 13.309 16 10 16C6.691 16 4 13.309 4 10C4 6.691 6.691 4 10 4ZM9 6V11H14V9H11V6H9Z" />
+                        </svg>
+                        <select class="bg-transparent border-none text-text-secondary cursor-pointer"
+                            aria-label="Currency selector">
+                            <option>USD</option>
+                            <option>EUR</option>
+                            <option>GBP</option>
+                        </select>
+                    </div>
+                    <a href="javascript:void(0)" class="btn btn-primary" id="getQuoteBtn">Get Quote</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden p-2" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 6H21V8H3V6ZM3 11H21V13H3V11ZM3 16H21V18H3V16Z" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="lg:hidden hidden bg-white border-t border-border" id="mobileMenu">
+            <div class="container-custom py-4 space-y-4">
+                <a href="homepage.html" class="block py-2 nav-link">Home</a>
+                <a href="safari_experiences.html" class="block py-2 nav-link">Safari Experiences</a>
+                <a href="cultural_tours.html" class="block py-2 nav-link">Cultural Tours</a>
+                <a href="custom_trip_planner.html" class="block py-2 nav-link nav-link-active">Plan Your Trip</a>
+                <a href="about_our_story.html" class="block py-2 nav-link">Our Story</a>
+                <a href="guest_adventures.html" class="block py-2 nav-link">Guest Stories</a>
+                <div class="pt-4 border-t border-border">
+                    <button class="btn btn-primary w-full text-center" id="mobileGetQuoteBtn">Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-16 bg-gradient-to-br from-primary/5 via-surface to-accent/5">
+        <div class="container-custom">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full shadow-sm mb-6">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#2D5016">
+                        <path d="M10 2L12.5 7.5L18 8.5L14 12.5L15 18L10 15.5L5 18L6 12.5L2 8.5L7.5 7.5L10 2Z" />
+                    </svg>
+                    <span class="text-sm font-medium text-primary">AI-Powered Trip Planning</span>
+                </div>
+                <h1 class="font-headline text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6">Design Your
+                    Perfect Uganda Adventure</h1>
+                <p class="text-lg md:text-xl text-text-secondary mb-8">Answer a few questions and let our intelligent
+                    planner create a personalized itinerary tailored to your dreams, budget, and travel style</p>
+
+                <!-- Progress Indicator -->
+                <div class="flex items-center justify-center gap-2 mb-8">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-semibold step-indicator active"
+                            data-step="1">1</div>
+                        <span class="text-sm font-medium text-primary">Preferences</span>
+                    </div>
+                    <div class="w-12 h-0.5 bg-border"></div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-border text-text-tertiary flex items-center justify-center text-sm font-semibold step-indicator"
+                            data-step="2">2</div>
+                        <span class="text-sm text-text-tertiary">Details</span>
+                    </div>
+                    <div class="w-12 h-0.5 bg-border"></div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-border text-text-tertiary flex items-center justify-center text-sm font-semibold step-indicator"
+                            data-step="3">3</div>
+                        <span class="text-sm text-text-tertiary">Customize</span>
+                    </div>
+                    <div class="w-12 h-0.5 bg-border"></div>
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-full bg-border text-text-tertiary flex items-center justify-center text-sm font-semibold step-indicator"
+                            data-step="4">4</div>
+                        <span class="text-sm text-text-tertiary">Review</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trip Planning Wizard -->
+    <section class="section">
+        <div class="container-custom">
+            <div class="max-w-5xl mx-auto">
+                <!-- Step 1: Travel Preferences -->
+                <div class="planning-step active" id="step1">
+                    <div class="bg-white rounded-lg shadow-md p-8 md:p-12">
+                        <div class="mb-8">
+                            <h2 class="font-headline text-3xl md:text-4xl font-semibold text-text-primary mb-3">Tell Us
+                                About Your Dream Trip</h2>
+                            <p class="text-text-secondary">Share your travel preferences so we can create the perfect
+                                itinerary for you</p>
+                        </div>
+
+                        <div class="space-y-8">
+                            <!-- Trip Duration -->
+                            <div>
+                                <label class="form-label flex items-center gap-2 mb-4">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#2D5016">
+                                        <path
+                                            d="M10 2C5.589 2 2 5.589 2 10C2 14.411 5.589 18 10 18C14.411 18 18 14.411 18 10C18 5.589 14.411 2 10 2ZM10 4C13.309 4 16 6.691 16 10C16 13.309 13.309 16 10 16C6.691 16 4 13.309 4 10C4 6.691 6.691 4 10 4ZM9 6V11H14V9H11V6H9Z" />
+                                    </svg>
+                                    How long would you like to travel?
+                                </label>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                    <button
+                                        class="duration-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-center"
+                                        data-value="3-5">
+                                        <div class="font-semibold text-text-primary mb-1">3-5 Days</div>
+                                        <div class="text-sm text-text-secondary">Quick Escape</div>
+                                    </button>
+                                    <button
+                                        class="duration-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-center"
+                                        data-value="6-10">
+                                        <div class="font-semibold text-text-primary mb-1">6-10 Days</div>
+                                        <div class="text-sm text-text-secondary">Classic Tour</div>
+                                    </button>
+                                    <button
+                                        class="duration-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-center"
+                                        data-value="11-14">
+                                        <div class="font-semibold text-text-primary mb-1">11-14 Days</div>
+                                        <div class="text-sm text-text-secondary">Extended Adventure</div>
+                                    </button>
+                                    <button
+                                        class="duration-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-center"
+                                        data-value="15+">
+                                        <div class="font-semibold text-text-primary mb-1">15+ Days</div>
+                                        <div class="text-sm text-text-secondary">Grand Expedition</div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Budget Range -->
+                            <div>
+                                <label class="form-label flex items-center gap-2 mb-4">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#2D5016">
+                                        <path
+                                            d="M10 2C5.589 2 2 5.589 2 10C2 14.411 5.589 18 10 18C14.411 18 18 14.411 18 10C18 5.589 14.411 2 10 2ZM10 4C13.309 4 16 6.691 16 10C16 13.309 13.309 16 10 16C6.691 16 4 13.309 4 10C4 6.691 6.691 4 10 4ZM9 6V8H8V10H9V12H8V14H9V15H11V14H12V12H11V10H12V8H11V7H10V6H9ZM10 8H11V10H10V8ZM9 10H10V12H9V10Z" />
+                                    </svg>
+                                    What's your budget per person? (USD)
+                                </label>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <button
+                                        class="budget-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-left"
+                                        data-value="1000-2500">
+                                        <div class="font-semibold text-text-primary mb-1">$1,000 - $2,500</div>
+                                        <div class="text-sm text-text-secondary">Budget-Friendly Adventures</div>
+                                    </button>
+                                    <button
+                                        class="budget-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-left"
+                                        data-value="2500-5000">
+                                        <div class="font-semibold text-text-primary mb-1">$2,500 - $5,000</div>
+                                        <div class="text-sm text-text-secondary">Comfort & Quality</div>
+                                    </button>
+                                    <button
+                                        class="budget-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-left"
+                                        data-value="5000-10000">
+                                        <div class="font-semibold text-text-primary mb-1">$5,000 - $10,000</div>
+                                        <div class="text-sm text-text-secondary">Premium Experiences</div>
+                                    </button>
+                                    <button
+                                        class="budget-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-left"
+                                        data-value="10000+">
+                                        <div class="font-semibold text-text-primary mb-1">$10,000+</div>
+                                        <div class="text-sm text-text-secondary">Luxury & Exclusivity</div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Travel Interests -->
+                            <div>
+                                <label class="form-label flex items-center gap-2 mb-4">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#2D5016">
+                                        <path
+                                            d="M10 2L12.5 7.5L18 8.5L14 12.5L15 18L10 15.5L5 18L6 12.5L2 8.5L7.5 7.5L10 2Z" />
+                                    </svg>
+                                    What interests you most? (Select all that apply)
+                                </label>
+                                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                                    <button
+                                        class="interest-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-center"
+                                        data-value="gorilla-trekking">
+                                        <div class="text-3xl mb-2">🦍</div>
+                                        <div class="font-medium text-text-primary">Gorilla Trekking</div>
+                                    </button>
+                                    <button
+                                        class="interest-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-center"
+                                        data-value="wildlife-safari">
+                                        <div class="text-3xl mb-2">🦁</div>
+                                        <div class="font-medium text-text-primary">Wildlife Safari</div>
+                                    </button>
+                                    <button
+                                        class="interest-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-center"
+                                        data-value="cultural-tours">
+                                        <div class="text-3xl mb-2">🎭</div>
+                                        <div class="font-medium text-text-primary">Cultural Tours</div>
+                                    </button>
+                                    <button
+                                        class="interest-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-center"
+                                        data-value="bird-watching">
+                                        <div class="text-3xl mb-2">🦜</div>
+                                        <div class="font-medium text-text-primary">Bird Watching</div>
+                                    </button>
+                                    <button
+                                        class="interest-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-center"
+                                        data-value="adventure-sports">
+                                        <div class="text-3xl mb-2">🚣</div>
+                                        <div class="font-medium text-text-primary">Adventure Sports</div>
+                                    </button>
+                                    <button
+                                        class="interest-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-center"
+                                        data-value="photography">
+                                        <div class="text-3xl mb-2">📸</div>
+                                        <div class="font-medium text-text-primary">Photography</div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Travel Style -->
+                            <div>
+                                <label class="form-label flex items-center gap-2 mb-4">
+                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="#2D5016">
+                                        <path
+                                            d="M10 2C6.134 2 3 5.134 3 9C3 13.5 10 20 10 20C10 20 17 13.5 17 9C17 5.134 13.866 2 10 2ZM10 11C8.895 11 8 10.105 8 9C8 7.895 8.895 7 10 7C11.105 7 12 7.895 12 9C12 10.105 11.105 11 10 11Z" />
+                                    </svg>
+                                    What's your preferred travel style?
+                                </label>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <button
+                                        class="style-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-center"
+                                        data-value="relaxed">
+                                        <div class="font-semibold text-text-primary mb-1">Relaxed Pace</div>
+                                        <div class="text-sm text-text-secondary">Leisurely exploration</div>
+                                    </button>
+                                    <button
+                                        class="style-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-center"
+                                        data-value="balanced">
+                                        <div class="font-semibold text-text-primary mb-1">Balanced</div>
+                                        <div class="text-sm text-text-secondary">Mix of activities & rest</div>
+                                    </button>
+                                    <button
+                                        class="style-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors text-center"
+                                        data-value="adventurous">
+                                        <div class="font-semibold text-text-primary mb-1">Action-Packed</div>
+                                        <div class="text-sm text-text-secondary">Maximum experiences</div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end mt-8">
+                            <button class="btn btn-primary" id="step1Next">
+                                Continue to Details
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" class="inline ml-2">
+                                    <path d="M7 4L13 10L7 16V4Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Travel Details -->
+                <div class="planning-step hidden" id="step2">
+                    <div class="bg-white rounded-lg shadow-md p-8 md:p-12">
+                        <div class="mb-8">
+                            <h2 class="font-headline text-3xl md:text-4xl font-semibold text-text-primary mb-3">Travel
+                                Details</h2>
+                            <p class="text-text-secondary">Help us plan the logistics of your perfect adventure</p>
+                        </div>
+
+                        <div class="space-y-6">
+                            <!-- Travel Dates -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="form-label">Preferred Start Date</label>
+                                    <input type="date" class="form-input" id="startDate" min="2025-01-01"
+                                        aria-label="Trip start date">
+                                </div>
+                                <div>
+                                    <label class="form-label">Flexible Dates?</label>
+                                    <select class="form-input" id="dateFlexibility" aria-label="Date flexibility">
+                                        <option value="exact">Exact dates only</option>
+                                        <option value="week">±1 week flexible</option>
+                                        <option value="month">±1 month flexible</option>
+                                        <option value="season">Seasonal (best time)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Group Size -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="form-label">Number of Travelers</label>
+                                    <select class="form-input" id="groupSize" aria-label="Number of travelers">
+                                        <option value="1">Solo Traveler</option>
+                                        <option value="2">2 People (Couple)</option>
+                                        <option value="3-4">3-4 People (Small Group)</option>
+                                        <option value="5-8">5-8 People (Family/Friends)</option>
+                                        <option value="9+">9+ People (Large Group)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="form-label">Traveler Types</label>
+                                    <select class="form-input" id="travelerTypes" aria-label="Traveler types">
+                                        <option value="adults">Adults only</option>
+                                        <option value="family">Family with children</option>
+                                        <option value="mixed">Mixed ages</option>
+                                        <option value="seniors">Senior travelers</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Accommodation Preferences -->
+                            <div>
+                                <label class="form-label">Accommodation Preference</label>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                    <button
+                                        class="accommodation-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors"
+                                        data-value="budget">
+                                        <div class="font-semibold text-text-primary mb-2">Budget</div>
+                                        <div class="text-sm text-text-secondary mb-3">Clean, comfortable lodges</div>
+                                        <div class="text-xs text-text-tertiary">$50-100/night</div>
+                                    </button>
+                                    <button
+                                        class="accommodation-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors"
+                                        data-value="mid-range">
+                                        <div class="font-semibold text-text-primary mb-2">Mid-Range</div>
+                                        <div class="text-sm text-text-secondary mb-3">Quality hotels & lodges</div>
+                                        <div class="text-xs text-text-tertiary">$100-250/night</div>
+                                    </button>
+                                    <button
+                                        class="accommodation-option p-4 border-2 border-border rounded-md hover:border-primary transition-colors"
+                                        data-value="luxury">
+                                        <div class="font-semibold text-text-primary mb-2">Luxury</div>
+                                        <div class="text-sm text-text-secondary mb-3">Premium safari lodges</div>
+                                        <div class="text-xs text-text-tertiary">$250-500+/night</div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Dietary Requirements -->
+                            <div>
+                                <label class="form-label">Dietary Requirements</label>
+                                <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                                    <label
+                                        class="flex items-center gap-2 p-3 border border-border rounded-md cursor-pointer hover:bg-surface transition-colors">
+                                        <input type="checkbox" class="dietary-checkbox" value="vegetarian"
+                                            aria-label="Vegetarian option">
+                                        <span class="text-sm">Vegetarian</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 p-3 border border-border rounded-md cursor-pointer hover:bg-surface transition-colors">
+                                        <input type="checkbox" class="dietary-checkbox" value="vegan"
+                                            aria-label="Vegan option">
+                                        <span class="text-sm">Vegan</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 p-3 border border-border rounded-md cursor-pointer hover:bg-surface transition-colors">
+                                        <input type="checkbox" class="dietary-checkbox" value="halal"
+                                            aria-label="Halal option">
+                                        <span class="text-sm">Halal</span>
+                                    </label>
+                                    <label
+                                        class="flex items-center gap-2 p-3 border border-border rounded-md cursor-pointer hover:bg-surface transition-colors">
+                                        <input type="checkbox" class="dietary-checkbox" value="gluten-free"
+                                            aria-label="Gluten-free option">
+                                        <span class="text-sm">Gluten-Free</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Special Requirements -->
+                            <div>
+                                <label class="form-label">Special Requirements or Requests</label>
+                                <textarea class="form-input" rows="4"
+                                    placeholder="Any mobility concerns, health considerations, or special requests we should know about?"
+                                    aria-label="Special requirements"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between mt-8">
+                            <button class="btn btn-outline" id="step2Back">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" class="inline mr-2">
+                                    <path d="M13 4L7 10L13 16V4Z" />
+                                </svg>
+                                Back
+                            </button>
+                            <button class="btn btn-primary" id="step2Next">
+                                Continue to Customize
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" class="inline ml-2">
+                                    <path d="M7 4L13 10L7 16V4Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Customize Itinerary -->
+                <div class="planning-step hidden" id="step3">
+                    <div class="bg-white rounded-lg shadow-md p-8 md:p-12">
+                        <div class="mb-8">
+                            <h2 class="font-headline text-3xl md:text-4xl font-semibold text-text-primary mb-3">
+                                Customize Your Itinerary</h2>
+                            <p class="text-text-secondary">Select destinations and activities to create your perfect
+                                adventure</p>
+                        </div>
+
+                        <!-- Interactive Map Section -->
+                        <div class="mb-8">
+                            <h3 class="font-headline text-xl font-semibold text-text-primary mb-4">Select Destinations
+                            </h3>
+                            <div class="bg-surface rounded-lg p-6">
+                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                                    <!-- Map Visualization -->
+                                    <div class="relative bg-white rounded-lg p-6 shadow-sm">
+                                        <svg viewBox="0 0 400 500" class="w-full h-auto">
+                                            <path
+                                                d="M200 50 L250 100 L280 150 L290 200 L280 250 L250 300 L200 350 L150 300 L120 250 L110 200 L120 150 L150 100 Z"
+                                                fill="#F8F6F3" stroke="#2D5016" stroke-width="2" />
+
+                                            <g class="cursor-pointer hover:opacity-80 transition-opacity destination-marker"
+                                                data-destination="bwindi">
+                                                <circle cx="200" cy="150" r="30" fill="#2D5016" opacity="0.2" />
+                                                <circle cx="200" cy="150" r="8" fill="#DAA520" />
+                                                <text x="200" y="190" text-anchor="middle" class="text-xs font-medium"
+                                                    fill="#1A1A1A">Bwindi</text>
+                                            </g>
+
+                                            <g class="cursor-pointer hover:opacity-80 transition-opacity destination-marker"
+                                                data-destination="queen-elizabeth">
+                                                <circle cx="150" cy="220" r="30" fill="#2D5016" opacity="0.2" />
+                                                <circle cx="150" cy="220" r="8" fill="#DAA520" />
+                                                <text x="150" y="260" text-anchor="middle" class="text-xs font-medium"
+                                                    fill="#1A1A1A">Queen Elizabeth</text>
+                                            </g>
+
+                                            <g class="cursor-pointer hover:opacity-80 transition-opacity destination-marker"
+                                                data-destination="murchison">
+                                                <circle cx="250" cy="220" r="30" fill="#2D5016" opacity="0.2" />
+                                                <circle cx="250" cy="220" r="8" fill="#DAA520" />
+                                                <text x="250" y="260" text-anchor="middle" class="text-xs font-medium"
+                                                    fill="#1A1A1A">Murchison Falls</text>
+                                            </g>
+
+                                            <g class="cursor-pointer hover:opacity-80 transition-opacity destination-marker"
+                                                data-destination="kampala">
+                                                <circle cx="200" cy="280" r="30" fill="#8B4513" opacity="0.2" />
+                                                <circle cx="200" cy="280" r="8" fill="#DAA520" />
+                                                <text x="200" y="320" text-anchor="middle" class="text-xs font-medium"
+                                                    fill="#1A1A1A">Kampala</text>
+                                            </g>
+                                        </svg>
+                                    </div>
+
+                                    <!-- Selected Destinations -->
+                                    <div class="space-y-4">
+                                        <div class="destination-card p-4 border-2 border-border rounded-md cursor-pointer hover:border-primary transition-colors"
+                                            data-destination="bwindi">
+                                            <div class="flex items-start justify-between">
+                                                <div class="flex-1">
+                                                    <h4 class="font-semibold text-text-primary mb-1">Bwindi Impenetrable
+                                                        Forest</h4>
+                                                    <p class="text-sm text-text-secondary mb-2">Gorilla trekking &
+                                                        rainforest exploration</p>
+                                                    <div class="text-xs text-text-tertiary">2-3 days recommended</div>
+                                                </div>
+                                                <div
+                                                    class="destination-checkbox w-6 h-6 border-2 border-border rounded flex items-center justify-center">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="white"
+                                                        class="hidden">
+                                                        <path d="M6 11L3 8L4.5 6.5L6 8L11.5 2.5L13 4L6 11Z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="destination-card p-4 border-2 border-border rounded-md cursor-pointer hover:border-primary transition-colors"
+                                            data-destination="queen-elizabeth">
+                                            <div class="flex items-start justify-between">
+                                                <div class="flex-1">
+                                                    <h4 class="font-semibold text-text-primary mb-1">Queen Elizabeth
+                                                        National Park</h4>
+                                                    <p class="text-sm text-text-secondary mb-2">Wildlife safari & boat
+                                                        cruises</p>
+                                                    <div class="text-xs text-text-tertiary">2-3 days recommended</div>
+                                                </div>
+                                                <div
+                                                    class="destination-checkbox w-6 h-6 border-2 border-border rounded flex items-center justify-center">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="white"
+                                                        class="hidden">
+                                                        <path d="M6 11L3 8L4.5 6.5L6 8L11.5 2.5L13 4L6 11Z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="destination-card p-4 border-2 border-border rounded-md cursor-pointer hover:border-primary transition-colors"
+                                            data-destination="murchison">
+                                            <div class="flex items-start justify-between">
+                                                <div class="flex-1">
+                                                    <h4 class="font-semibold text-text-primary mb-1">Murchison Falls
+                                                        National Park</h4>
+                                                    <p class="text-sm text-text-secondary mb-2">Waterfall views & Nile
+                                                        adventures</p>
+                                                    <div class="text-xs text-text-tertiary">2-3 days recommended</div>
+                                                </div>
+                                                <div
+                                                    class="destination-checkbox w-6 h-6 border-2 border-border rounded flex items-center justify-center">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="white"
+                                                        class="hidden">
+                                                        <path d="M6 11L3 8L4.5 6.5L6 8L11.5 2.5L13 4L6 11Z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="destination-card p-4 border-2 border-border rounded-md cursor-pointer hover:border-primary transition-colors"
+                                            data-destination="kampala">
+                                            <div class="flex items-start justify-between">
+                                                <div class="flex-1">
+                                                    <h4 class="font-semibold text-text-primary mb-1">Kampala City</h4>
+                                                    <p class="text-sm text-text-secondary mb-2">Cultural sites & urban
+                                                        experiences</p>
+                                                    <div class="text-xs text-text-tertiary">1-2 days recommended</div>
+                                                </div>
+                                                <div
+                                                    class="destination-checkbox w-6 h-6 border-2 border-border rounded flex items-center justify-center">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="white"
+                                                        class="hidden">
+                                                        <path d="M6 11L3 8L4.5 6.5L6 8L11.5 2.5L13 4L6 11Z" />
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Services -->
+                        <div class="mb-8">
+                            <h3 class="font-headline text-xl font-semibold text-text-primary mb-4">Additional Services
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <label
+                                    class="flex items-start gap-3 p-4 border border-border rounded-md cursor-pointer hover:bg-surface transition-colors">
+                                    <input type="checkbox" class="service-checkbox mt-1" value="travel-insurance"
+                                        aria-label="Travel insurance">
+                                    <div>
+                                        <div class="font-medium text-text-primary">Travel Insurance</div>
+                                        <div class="text-sm text-text-secondary">Comprehensive coverage for your trip
+                                        </div>
+                                    </div>
+                                </label>
+                                <label
+                                    class="flex items-start gap-3 p-4 border border-border rounded-md cursor-pointer hover:bg-surface transition-colors">
+                                    <input type="checkbox" class="service-checkbox mt-1" value="visa-assistance"
+                                        aria-label="Visa assistance">
+                                    <div>
+                                        <div class="font-medium text-text-primary">Visa Assistance</div>
+                                        <div class="text-sm text-text-secondary">Help with visa application process
+                                        </div>
+                                    </div>
+                                </label>
+                                <label
+                                    class="flex items-start gap-3 p-4 border border-border rounded-md cursor-pointer hover:bg-surface transition-colors">
+                                    <input type="checkbox" class="service-checkbox mt-1" value="airport-transfers"
+                                        aria-label="Airport transfers">
+                                    <div>
+                                        <div class="font-medium text-text-primary">Airport Transfers</div>
+                                        <div class="text-sm text-text-secondary">Private pickup and drop-off</div>
+                                    </div>
+                                </label>
+                                <label
+                                    class="flex items-start gap-3 p-4 border border-border rounded-md cursor-pointer hover:bg-surface transition-colors">
+                                    <input type="checkbox" class="service-checkbox mt-1" value="photography-package"
+                                        aria-label="Photography package">
+                                    <div>
+                                        <div class="font-medium text-text-primary">Photography Package</div>
+                                        <div class="text-sm text-text-secondary">Professional photographer for your trip
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between mt-8">
+                            <button class="btn btn-outline" id="step3Back">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" class="inline mr-2">
+                                    <path d="M13 4L7 10L13 16V4Z" />
+                                </svg>
+                                Back
+                            </button>
+                            <button class="btn btn-primary" id="step3Next">
+                                Review Your Trip
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" class="inline ml-2">
+                                    <path d="M7 4L13 10L7 16V4Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Review & Quote -->
+                <div class="planning-step hidden" id="step4">
+                    <div class="bg-white rounded-lg shadow-md p-8 md:p-12">
+                        <div class="mb-8">
+                            <h2 class="font-headline text-3xl md:text-4xl font-semibold text-text-primary mb-3">Your
+                                Custom Itinerary</h2>
+                            <p class="text-text-secondary">Review your personalized Uganda adventure and get your quote
+                            </p>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                            <!-- Itinerary Summary -->
+                            <div class="lg:col-span-2 space-y-6">
+                                <!-- Trip Overview -->
+                                <div class="bg-surface rounded-lg p-6">
+                                    <h3 class="font-headline text-xl font-semibold text-text-primary mb-4">Trip Overview
+                                    </h3>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <div class="text-sm text-text-secondary mb-1">Duration</div>
+                                            <div class="font-medium text-text-primary" id="summaryDuration">-</div>
+                                        </div>
+                                        <div>
+                                            <div class="text-sm text-text-secondary mb-1">Travel Style</div>
+                                            <div class="font-medium text-text-primary" id="summaryStyle">-</div>
+                                        </div>
+                                        <div>
+                                            <div class="text-sm text-text-secondary mb-1">Group Size</div>
+                                            <div class="font-medium text-text-primary" id="summaryGroup">-</div>
+                                        </div>
+                                        <div>
+                                            <div class="text-sm text-text-secondary mb-1">Accommodation</div>
+                                            <div class="font-medium text-text-primary" id="summaryAccommodation">-</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Selected Destinations -->
+                                <div class="bg-surface rounded-lg p-6">
+                                    <h3 class="font-headline text-xl font-semibold text-text-primary mb-4">Your
+                                        Destinations</h3>
+                                    <div class="space-y-3" id="selectedDestinations">
+                                        <div class="text-text-secondary">No destinations selected yet</div>
+                                    </div>
+                                </div>
+
+                                <!-- Included Activities -->
+                                <div class="bg-surface rounded-lg p-6">
+                                    <h3 class="font-headline text-xl font-semibold text-text-primary mb-4">Included
+                                        Activities</h3>
+                                    <div class="space-y-2" id="includedActivities">
+                                        <div class="text-text-secondary">Activities will be shown based on your
+                                            selections</div>
+                                    </div>
+                                </div>
+
+                                <!-- What's Included -->
+                                <div class="bg-surface rounded-lg p-6">
+                                    <h3 class="font-headline text-xl font-semibold text-text-primary mb-4">What's
+                                        Included</h3>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                        <div class="flex items-center gap-2">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="#228B22">
+                                                <path
+                                                    d="M10 2C5.589 2 2 5.589 2 10C2 14.411 5.589 18 10 18C14.411 18 18 14.411 18 10C18 5.589 14.411 2 10 2ZM9 14L5 10L6.5 8.5L9 11L13.5 6.5L15 8L9 14Z" />
+                                            </svg>
+                                            <span class="text-sm text-text-secondary">All accommodation</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="#228B22">
+                                                <path
+                                                    d="M10 2C5.589 2 2 5.589 2 10C2 14.411 5.589 18 10 18C14.411 18 18 14.411 18 10C18 5.589 14.411 2 10 2ZM9 14L5 10L6.5 8.5L9 11L13.5 6.5L15 8L9 14Z" />
+                                            </svg>
+                                            <span class="text-sm text-text-secondary">All meals as specified</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="#228B22">
+                                                <path
+                                                    d="M10 2C5.589 2 2 5.589 2 10C2 14.411 5.589 18 10 18C14.411 18 18 14.411 18 10C18 5.589 14.411 2 10 2ZM9 14L5 10L6.5 8.5L9 11L13.5 6.5L15 8L9 14Z" />
+                                            </svg>
+                                            <span class="text-sm text-text-secondary">Private 4x4 safari vehicle</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="#228B22">
+                                                <path
+                                                    d="M10 2C5.589 2 2 5.589 2 10C2 14.411 5.589 18 10 18C14.411 18 18 14.411 18 10C18 5.589 14.411 2 10 2ZM9 14L5 10L6.5 8.5L9 11L13.5 6.5L15 8L9 14Z" />
+                                            </svg>
+                                            <span class="text-sm text-text-secondary">Professional English-speaking
+                                                guide</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="#228B22">
+                                                <path
+                                                    d="M10 2C5.589 2 2 5.589 2 10C2 14.411 5.589 18 10 18C14.411 18 18 14.411 18 10C18 5.589 14.411 2 10 2ZM9 14L5 10L6.5 8.5L9 11L13.5 6.5L15 8L9 14Z" />
+                                            </svg>
+                                            <span class="text-sm text-text-secondary">Park entrance fees</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="#228B22">
+                                                <path
+                                                    d="M10 2C5.589 2 2 5.589 2 10C2 14.411 5.589 18 10 18C14.411 18 18 14.411 18 10C18 5.589 14.411 2 10 2ZM9 14L5 10L6.5 8.5L9 11L13.5 6.5L15 8L9 14Z" />
+                                            </svg>
+                                            <span class="text-sm text-text-secondary">Bottled water during
+                                                activities</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Price Summary -->
+                            <div class="lg:col-span-1">
+                                <div class="bg-primary text-white rounded-lg p-6 sticky top-24">
+                                    <h3 class="font-headline text-2xl font-semibold mb-6">Your Quote</h3>
+
+                                    <div class="space-y-4 mb-6">
+                                        <div class="flex justify-between items-center pb-3 border-b border-white/20">
+                                            <span class="text-sm opacity-90">Base Package</span>
+                                            <span class="font-semibold">$3,450</span>
+                                        </div>
+                                        <div class="flex justify-between items-center pb-3 border-b border-white/20">
+                                            <span class="text-sm opacity-90">Accommodation Upgrade</span>
+                                            <span class="font-semibold">$850</span>
+                                        </div>
+                                        <div class="flex justify-between items-center pb-3 border-b border-white/20">
+                                            <span class="text-sm opacity-90">Additional Services</span>
+                                            <span class="font-semibold">$320</span>
+                                        </div>
+                                        <div class="flex justify-between items-center pt-2">
+                                            <span class="text-lg font-semibold">Total per Person</span>
+                                            <span class="text-3xl font-bold">$4,620</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-white/10 rounded-md p-4 mb-6">
+                                        <div class="flex items-start gap-2 mb-2">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
+                                                class="flex-shrink-0 mt-0.5">
+                                                <path
+                                                    d="M10 2C5.589 2 2 5.589 2 10C2 14.411 5.589 18 10 18C14.411 18 18 14.411 18 10C18 5.589 14.411 2 10 2ZM9 6H11V11H9V6ZM10 15C9.447 15 9 14.553 9 14C9 13.447 9.447 13 10 13C10.553 13 11 13.447 11 14C11 14.553 10.553 15 10 15Z" />
+                                            </svg>
+                                            <div class="text-sm">
+                                                <div class="font-medium mb-1">Flexible Payment</div>
+                                                <div class="opacity-90">30% deposit to secure booking, balance due 60
+                                                    days before departure</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-3">
+                                        <button class="btn bg-accent text-text-primary hover:bg-accent-dark w-full">
+                                            Request Detailed Quote
+                                        </button>
+                                        <button class="btn bg-white/10 hover:bg-white/20 text-white w-full">
+                                            Speak with Expert
+                                        </button>
+                                    </div>
+
+                                    <div class="mt-6 pt-6 border-t border-white/20">
+                                        <div class="flex items-center gap-2 text-sm opacity-90 mb-2">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                                <path
+                                                    d="M8 2C4.691 2 2 4.691 2 8C2 11.309 4.691 14 8 14C11.309 14 14 11.309 14 8C14 4.691 11.309 2 8 2ZM7 10L4 7L5.5 5.5L7 7L10.5 3.5L12 5L7 10Z" />
+                                            </svg>
+                                            <span>Best Price Guarantee</span>
+                                        </div>
+                                        <div class="flex items-center gap-2 text-sm opacity-90">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                                <path
+                                                    d="M8 2C4.691 2 2 4.691 2 8C2 11.309 4.691 14 8 14C11.309 14 14 11.309 14 8C14 4.691 11.309 2 8 2ZM7 10L4 7L5.5 5.5L7 7L10.5 3.5L12 5L7 10Z" />
+                                            </svg>
+                                            <span>Free Cancellation up to 30 days</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between mt-8">
+                            <button class="btn btn-outline" id="step4Back">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" class="inline mr-2">
+                                    <path d="M13 4L7 10L13 16V4Z" />
+                                </svg>
+                                Back to Customize
+                            </button>
+                            <button class="btn btn-primary" id="saveItinerary">
+                                Save & Share Itinerary
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" class="inline ml-2">
+                                    <path
+                                        d="M15 3H5C3.895 3 3 3.895 3 5V15C3 16.105 3.895 17 5 17H15C16.105 17 17 16.105 17 15V5C17 3.895 16.105 3 15 3ZM13 10H11V13H9V10H7L10 7L13 10Z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Plan With Us -->
+    <section class="section section-surface">
+        <div class="container-custom">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="font-headline text-4xl md:text-5xl font-bold text-text-primary mb-4">Why Plan With Ample
+                    Grace?</h2>
+                <p class="text-lg text-text-secondary">Experience the difference of personalized service and local
+                    expertise</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="#2D5016">
+                            <path
+                                d="M16 4C9.373 4 4 9.373 4 16C4 22.627 9.373 28 16 28C22.627 28 28 22.627 28 16C28 9.373 22.627 4 16 4ZM16 8C19.309 8 22 10.691 22 14C22 17.309 19.309 20 16 20C12.691 20 10 17.309 10 14C10 10.691 12.691 8 16 8Z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-text-primary mb-2">Local Expertise</h3>
+                    <p class="text-text-secondary">15+ years of Uganda safari experience</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="#2D5016">
+                            <path d="M16 4L20 12L28 13L22 19L24 27L16 23L8 27L10 19L4 13L12 12L16 4Z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-text-primary mb-2">Personalized Service</h3>
+                    <p class="text-text-secondary">Every itinerary tailored to you</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="#2D5016">
+                            <path
+                                d="M16 4C9.373 4 4 9.373 4 16C4 22.627 9.373 28 16 28C22.627 28 28 22.627 28 16C28 9.373 22.627 4 16 4ZM14 20L8 14L10 12L14 16L22 8L24 10L14 20Z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-text-primary mb-2">Best Price Guarantee</h3>
+                    <p class="text-text-secondary">Competitive rates, no hidden fees</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="#2D5016">
+                            <path d="M16 4L6 10V16C6 22 10 26 16 28C22 26 26 22 26 16V10L16 4Z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-text-primary mb-2">24/7 Support</h3>
+                    <p class="text-text-secondary">Always here when you need us</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Pre-Designed Tours -->
+    <section class="section">
+        <div class="container-custom">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="font-headline text-4xl md:text-5xl font-bold text-text-primary mb-4">Not Sure Where to Start?
+                </h2>
+                <p class="text-lg text-text-secondary">Explore our most popular pre-designed tours for inspiration</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-md mb-4 aspect-card">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_151dce676-1765126247058.png"
+                            alt="Mountain gorilla family in Bwindi Impenetrable Forest during gorilla trekking safari experience"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            onerror="this.src='https://images.pexels.com/photos/2280545/pexels-photo-2280545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div
+                            class="absolute top-4 right-4 bg-accent text-text-primary px-3 py-1 rounded-full text-sm font-medium">
+                            5 Days
+                        </div>
+                    </div>
+                    <h3
+                        class="font-headline text-xl font-semibold text-text-primary mb-2 group-hover:text-primary transition-colors">
+                        Gorilla Encounter</h3>
+                    <p class="text-text-secondary text-sm mb-3">Bwindi gorilla trekking with cultural experiences</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-primary font-semibold">From $2,450</span>
+                        <a href="safari_experiences.html" class="text-primary text-sm font-medium hover:underline">View
+                            Details →</a>
+                    </div>
+                </div>
+
+                <div class="card group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-md mb-4 aspect-card">
+                        <img src="https://images.unsplash.com/photo-1709477932365-065c5dd1e365"
+                            alt="African lion pride resting in Queen Elizabeth National Park during wildlife safari game drive"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            onerror="this.src='https://images.pexels.com/photos/247376/pexels-photo-247376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div
+                            class="absolute top-4 right-4 bg-accent text-text-primary px-3 py-1 rounded-full text-sm font-medium">
+                            8 Days
+                        </div>
+                    </div>
+                    <h3
+                        class="font-headline text-xl font-semibold text-text-primary mb-2 group-hover:text-primary transition-colors">
+                        Classic Safari</h3>
+                    <p class="text-text-secondary text-sm mb-3">Multi-park wildlife adventure across Uganda</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-primary font-semibold">From $3,850</span>
+                        <a href="safari_experiences.html" class="text-primary text-sm font-medium hover:underline">View
+                            Details →</a>
+                    </div>
+                </div>
+
+                <div class="card group cursor-pointer">
+                    <div class="relative overflow-hidden rounded-md mb-4 aspect-card">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1e571a75b-1764935543230.png"
+                            alt="Traditional Ugandan dancers performing cultural ceremony in colorful traditional attire"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                            onerror="this.src='https://images.pexels.com/photos/6069101/pexels-photo-6069101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div
+                            class="absolute top-4 right-4 bg-accent text-text-primary px-3 py-1 rounded-full text-sm font-medium">
+                            12 Days
+                        </div>
+                    </div>
+                    <h3
+                        class="font-headline text-xl font-semibold text-text-primary mb-2 group-hover:text-primary transition-colors">
+                        Grand Uganda</h3>
+                    <p class="text-text-secondary text-sm mb-3">Complete Uganda experience with all highlights</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-primary font-semibold">From $5,990</span>
+                        <a href="safari_experiences.html" class="text-primary text-sm font-medium hover:underline">View
+                            Details →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-surface">
+        <div class="container-custom">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="font-headline text-4xl md:text-5xl font-bold text-text-primary mb-4">Planning Questions?</h2>
+                <p class="text-lg text-text-secondary">Common questions about creating your custom Uganda adventure</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white rounded-lg shadow-sm">
+                    <button class="faq-question w-full text-left p-6 flex items-center justify-between" data-faq="1">
+                        <span class="font-semibold text-text-primary">How far in advance should I book my trip?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                            class="faq-icon transition-transform">
+                            <path d="M7 10L12 15L17 10H7Z" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6 text-text-secondary">
+                        <p>We recommend booking at least 3-6 months in advance, especially for gorilla trekking permits
+                            which have limited availability. For peak season travel (June-September, December-February),
+                            booking 6-12 months ahead ensures the best availability and rates.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm">
+                    <button class="faq-question w-full text-left p-6 flex items-center justify-between" data-faq="2">
+                        <span class="font-semibold text-text-primary">Can I modify my itinerary after booking?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                            class="faq-icon transition-transform">
+                            <path d="M7 10L12 15L17 10H7Z" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6 text-text-secondary">
+                        <p>Yes, we understand plans can change. Modifications are possible up to 60 days before
+                            departure, subject to availability and any applicable fees. Some permits (like gorilla
+                            trekking) have strict cancellation policies, so we'll work with you to find the best
+                            solution.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm">
+                    <button class="faq-question w-full text-left p-6 flex items-center justify-between" data-faq="3">
+                        <span class="font-semibold text-text-primary">What's included in the quoted price?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                            class="faq-icon transition-transform">
+                            <path d="M7 10L12 15L17 10H7Z" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6 text-text-secondary">
+                        <p>Our quotes include accommodation, meals as specified, private 4x4 safari vehicle with
+                            driver-guide, park entrance fees, and activities listed in your itinerary. International
+                            flights, visas, travel insurance, tips, and personal expenses are typically not included but
+                            can be arranged.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm">
+                    <button class="faq-question w-full text-left p-6 flex items-center justify-between" data-faq="4">
+                        <span class="font-semibold text-text-primary">Do you offer group discounts?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                            class="faq-icon transition-transform">
+                            <path d="M7 10L12 15L17 10H7Z" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6 text-text-secondary">
+                        <p>Yes! Groups of 6 or more travelers receive special rates. We also offer customized group
+                            planning tools and can coordinate complex logistics for larger parties. Contact us for a
+                            personalized group quote.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm">
+                    <button class="faq-question w-full text-left p-6 flex items-center justify-between" data-faq="5">
+                        <span class="font-semibold text-text-primary">What payment methods do you accept?</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
+                            class="faq-icon transition-transform">
+                            <path d="M7 10L12 15L17 10H7Z" />
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6 text-text-secondary">
+                        <p>We accept bank transfers, credit cards (Visa, Mastercard), and PayPal. A 30% deposit secures
+                            your booking, with the balance due 60 days before departure. We use secure payment
+                            processing and provide detailed receipts for all transactions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-primary text-white">
+        <div class="container-custom">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="font-headline text-4xl md:text-5xl font-bold mb-4">Need Help Planning?</h2>
+                <p class="text-xl mb-8 opacity-90">Our travel experts are here to create your perfect Uganda adventure
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="javascript:void(0)" class="btn bg-accent text-text-primary hover:bg-accent-dark px-8 py-4">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" class="inline mr-2">
+                            <path
+                                d="M3 3C2.447 3 2 3.447 2 4V16C2 16.553 2.447 17 3 17C3.553 17 4 16.553 4 16V4C4 3.447 3.553 3 3 3ZM7 7C6.447 7 6 7.447 6 8V16C6 16.553 6.447 17 7 17C7.553 17 8 16.553 8 16V8C8 7.447 7.553 7 7 7ZM11 5C10.447 5 10 5.447 10 6V16C10 16.553 10.447 17 11 17C11.553 17 12 16.553 12 16V6C12 5.447 11.553 5 11 5ZM15 9C14.447 9 14 9.447 14 10V16C14 16.553 14.447 17 15 17C15.553 17 16 16.553 16 16V10C16 9.447 15.553 9 15 9Z" />
+                        </svg>
+                        Call +256 703184214
+
+                    </a>
+                    <a href="javascript:void(0)" class="btn bg-white/10 hover:bg-white/20 text-white px-8 py-4">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" class="inline mr-2">
+                            <path
+                                d="M3 3C2.447 3 2 3.447 2 4V16C2 16.553 2.447 17 3 17H17C17.553 17 18 16.553 18 16V4C18 3.447 17.553 3 17 3H3ZM3.5 5H16.5L10 10L3.5 5Z" />
+                        </svg>
+                        Email Us
+                    </a>
+                </div>
+
+                <p class="text-sm mt-6 opacity-75">Available 24/7 to answer your questions and help plan your adventure
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white pt-16 pb-8">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="24" cy="24" r="22" fill="#DAA520" opacity="0.2" />
+                            <path
+                                d="M24 8C15.163 8 8 15.163 8 24C8 32.837 15.163 40 24 40C32.837 40 40 32.837 40 24C40 15.163 32.837 8 24 8ZM24 12C30.627 12 36 17.373 36 24C36 30.627 30.627 36 24 36C17.373 36 12 30.627 12 24C12 17.373 17.373 12 24 12Z"
+                                fill="white" />
+                            <path d="M24 16L28 22H20L24 16Z" fill="#DAA520" />
+                            <path d="M20 24H28V30C28 31.105 26.209 32 24 32C21.791 32 20 31.105 20 30V24Z"
+                                fill="white" />
+                        </svg>
+                        <div>
+                            <h3 class="font-headline text-xl font-bold">Ample Grace</h3>
+                            <p class="text-sm opacity-75">Tours & Safaris</p>
+                        </div>
+                    </div>
+                    <p class="text-sm opacity-75 mb-4">Authentic African adventures connecting travelers with Uganda's
+                        extraordinary wildlife, cultures, and landscapes.</p>
+                    <div class="flex gap-4">
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                            aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M10 2C5.589 2 2 5.589 2 10C2 14.411 5.589 18 10 18C14.411 18 18 14.411 18 10C18 5.589 14.411 2 10 2ZM12 10H11V16H8V10H7V8H8V7C8 5.895 8.895 5 10 5H12V7H11C10.447 7 10 7.447 10 8V8H12L12 10Z" />
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                            aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M10 2C7.284 2 6.944 2.012 5.877 2.06C4.813 2.108 4.086 2.278 3.45 2.525C2.791 2.779 2.234 3.123 1.678 3.678C1.123 4.234 0.779 4.791 0.525 5.45C0.278 6.086 0.108 6.813 0.06 7.877C0.012 8.944 0 9.284 0 12C0 14.716 0.012 15.056 0.06 16.123C0.108 17.187 0.278 17.914 0.525 18.55C0.779 19.209 1.123 19.766 1.678 20.322C2.234 20.877 2.791 21.221 3.45 21.475C4.086 21.722 4.813 21.892 5.877 21.94C6.944 21.988 7.284 22 10 22C12.716 22 13.056 21.988 14.123 21.94C15.187 21.892 15.914 21.722 16.55 21.475C17.209 21.221 17.766 20.877 18.322 20.322C18.877 19.766 19.221 19.209 19.475 18.55C19.722 17.914 19.892 17.187 19.94 16.123C19.988 15.056 20 14.716 20 12C20 9.284 19.988 8.944 19.94 7.877C19.892 6.813 19.722 6.086 19.475 5.45C19.221 4.791 18.877 4.234 18.322 3.678C17.766 3.123 17.209 2.779 16.55 2.525C15.914 2.278 15.187 2.108 14.123 2.06C13.056 2.012 12.716 2 10 2ZM10 4C12.669 4 12.987 4.01 14.041 4.058C15.016 4.102 15.546 4.265 15.898 4.403C16.365 4.588 16.698 4.81 17.048 5.16C17.398 5.51 17.62 5.843 17.805 6.31C17.943 6.662 18.106 7.192 18.15 8.167C18.198 9.221 18.208 9.539 18.208 12.208C18.208 14.877 18.198 15.195 18.15 16.249C18.106 17.224 17.943 17.754 17.805 18.106C17.62 18.573 17.398 18.906 17.048 19.256C16.698 19.606 16.365 19.828 15.898 20.013C15.546 20.151 15.016 20.314 14.041 20.358C12.987 20.406 12.669 20.416 10 20.416C7.331 20.416 7.013 20.406 5.959 20.358C4.984 20.314 4.454 20.151 4.102 20.013C3.635 19.828 3.302 19.606 2.952 19.256C2.602 18.906 2.38 18.573 2.195 18.106C2.057 17.754 1.894 17.224 1.85 16.249C1.802 15.195 1.792 14.877 1.792 12.208C1.792 9.539 1.802 9.221 1.85 8.167C1.894 7.192 2.057 6.662 2.195 6.31C2.38 5.843 2.602 5.51 2.952 5.16C3.302 4.81 3.635 4.588 4.102 4.403C4.454 4.265 4.984 4.102 5.959 4.058C7.013 4.01 7.331 4 10 4Z" />
+                                <path
+                                    d="M10 13C8.343 13 7 11.657 7 10C7 8.343 8.343 7 10 7C11.657 7 13 8.343 13 10C13 11.657 11.657 13 10 13ZM10 5C7.239 5 5 7.239 5 10C5 12.761 7.239 15 10 15C12.761 15 15 12.761 15 10C15 7.239 12.761 5 10 5Z" />
+                                <circle cx="15.5" cy="4.5" r="1" />
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)"
+                            class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+                            aria-label="Twitter">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                <path
+                                    d="M18 4.5C17.4 4.8 16.8 5 16.1 5.1C16.8 4.7 17.3 4 17.5 3.2C16.9 3.6 16.2 3.8 15.4 4C14.8 3.3 13.9 2.9 13 2.9C11.3 2.9 9.8 4.4 9.8 6.3C9.8 6.6 9.8 6.8 9.9 7C7.3 6.9 5 5.6 3.5 3.6C3.2 4.1 3.1 4.7 3.1 5.3C3.1 6.5 3.7 7.5 4.7 8.1C4.1 8.1 3.6 7.9 3.1 7.7V7.7C3.1 9.3 4.3 10.6 5.8 10.9C5.5 11 5.2 11 4.9 11C4.7 11 4.5 11 4.3 10.9C4.7 12.2 6 13.1 7.5 13.1C6.3 14 4.8 14.6 3.2 14.6C2.9 14.6 2.6 14.6 2.3 14.5C3.8 15.5 5.6 16 7.5 16C13 16 15.9 11 15.9 6.7V6.2C16.5 5.8 17.1 5.2 17.5 4.5H18Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-headline text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="safari_experiences.html"
+                                class="opacity-75 hover:opacity-100 transition-opacity">Safari Experiences</a></li>
+                        <li><a href="cultural_tours.html"
+                                class="opacity-75 hover:opacity-100 transition-opacity">Cultural Tours</a></li>
+                        <li><a href="custom_trip_planner.html"
+                                class="opacity-75 hover:opacity-100 transition-opacity">Plan Your Trip</a></li>
+                        <li><a href="about_our_story.html" class="opacity-75 hover:opacity-100 transition-opacity">About
+                                Us</a></li>
+                        <li><a href="guest_adventures.html"
+                                class="opacity-75 hover:opacity-100 transition-opacity">Guest Stories</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 class="font-headline text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="javascript:void(0)" class="opacity-75 hover:opacity-100 transition-opacity">Travel
+                                Guide</a></li>
+                        <li><a href="javascript:void(0)" class="opacity-75 hover:opacity-100 transition-opacity">Visa
+                                Information</a></li>
+                        <li><a href="javascript:void(0)" class="opacity-75 hover:opacity-100 transition-opacity">Packing
+                                Tips</a></li>
+                        <li><a href="javascript:void(0)" class="opacity-75 hover:opacity-100 transition-opacity">Health
+                                & Safety</a></li>
+                        <li><a href="javascript:void(0)"
+                                class="opacity-75 hover:opacity-100 transition-opacity">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-headline text-lg font-semibold mb-4">Contact Us</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-start gap-2">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
+                                class="flex-shrink-0 mt-0.5 opacity-75">
+                                <path
+                                    d="M10 2C6.134 2 3 5.134 3 9C3 13.5 10 20 10 20C10 20 17 13.5 17 9C17 5.134 13.866 2 10 2ZM10 11C8.895 11 8 10.105 8 9C8 7.895 8.895 7 10 7C11.105 7 12 7.895 12 9C12 10.105 11.105 11 10 11Z" />
+                            </svg>
+                            <span class="opacity-75">Jinja,Uganda<br>East Africa</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
+                                class="flex-shrink-0 opacity-75">
+                                <path
+                                    d="M3 3C2.447 3 2 3.447 2 4V16C2 16.553 2.447 17 3 17H17C17.553 17 18 16.553 18 16V4C18 3.447 17.553 3 17 3H3ZM3.5 5H16.5L10 10L3.5 5Z" />
+                            </svg>
+                            <a href="mailto:info@amplegracetours.com"
+                                class="opacity-75 hover:opacity-100 transition-opacity">info@amplegracetours.com</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"
+                                class="flex-shrink-0 opacity-75">
+                                <path
+                                    d="M3 3C2.447 3 2 3.447 2 4V16C2 16.553 2.447 17 3 17C3.553 17 4 16.553 4 16V4C4 3.447 3.553 3 3 3ZM7 7C6.447 7 6 7.447 6 8V16C6 16.553 6.447 17 7 17C7.553 17 8 16.553 8 16V8C8 7.447 7.553 7 7 7ZM11 5C10.447 5 10 5.447 10 6V16C10 16.553 10.447 17 11 17C11.553 17 12 16.553 12 16V6C12 5.447 11.553 5 11 5ZM15 9C14.447 9 14 9.447 14 10V16C14 16.553 14.447 17 15 17C15.553 17 16 16.553 16 16V10C16 9.447 15.553 9 15 9Z" />
+                            </svg>
+                            <a href="tel:+256703184214" class="opacity-75 hover:opacity-100 transition-opacity">+256 703
+                                184214</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-75">
+                <p>© 2025 Ample Grace Tours. All Rights Reserved.</p>
+                <div class="flex gap-6">
+                    <a href="javascript:void(0)" class="hover:opacity-100 transition-opacity">Privacy Policy</a>
+                    <a href="javascript:void(0)" class="hover:opacity-100 transition-opacity">Terms of Service</a>
+                    <a href="javascript:void(0)" class="hover:opacity-100 transition-opacity">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Sticky header
+        const header = document.getElementById('mainHeader');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 100) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Trip Planning Wizard State
+        let tripData = {
+            duration: '',
+            budget: '',
+            interests: [],
+            style: '',
+            startDate: '',
+            flexibility: '',
+            groupSize: '',
+            travelerTypes: '',
+            accommodation: '',
+            dietary: [],
+            destinations: [],
+            services: []
+        };
+
+        // Step 1: Preferences Selection
+        document.querySelectorAll('.duration-option').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.duration-option').forEach(b => b.classList.remove('border-primary', 'bg-primary/5'));
+                this.classList.add('border-primary', 'bg-primary/5');
+                tripData.duration = this.dataset.value;
+            });
+        });
+
+        document.querySelectorAll('.budget-option').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.budget-option').forEach(b => b.classList.remove('border-primary', 'bg-primary/5'));
+                this.classList.add('border-primary', 'bg-primary/5');
+                tripData.budget = this.dataset.value;
+            });
+        });
+
+        document.querySelectorAll('.interest-option').forEach(btn => {
+            btn.addEventListener('click', function () {
+                this.classList.toggle('border-primary');
+                this.classList.toggle('bg-primary/5');
+                const value = this.dataset.value;
+                if (tripData.interests.includes(value)) {
+                    tripData.interests = tripData.interests.filter(i => i !== value);
+                } else {
+                    tripData.interests.push(value);
+                }
+            });
+        });
+
+        document.querySelectorAll('.style-option').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.style-option').forEach(b => b.classList.remove('border-primary', 'bg-primary/5'));
+                this.classList.add('border-primary', 'bg-primary/5');
+                tripData.style = this.dataset.value;
+            });
+        });
+
+        // Step Navigation
+        document.getElementById('step1Next').addEventListener('click', () => {
+            if (tripData.duration && tripData.budget && tripData.interests.length > 0 && tripData.style) {
+                navigateToStep(2);
+            } else {
+                alert('Please complete all selections before continuing');
+            }
+        });
+
+        document.getElementById('step2Back').addEventListener('click', () => navigateToStep(1));
+        document.getElementById('step2Next').addEventListener('click', () => {
+            tripData.startDate = document.getElementById('startDate').value;
+            tripData.flexibility = document.getElementById('dateFlexibility').value;
+            tripData.groupSize = document.getElementById('groupSize').value;
+            tripData.travelerTypes = document.getElementById('travelerTypes').value;
+            navigateToStep(3);
+        });
+
+        document.getElementById('step3Back').addEventListener('click', () => navigateToStep(2));
+        document.getElementById('step3Next').addEventListener('click', () => {
+            updateSummary();
+            navigateToStep(4);
+        });
+
+        document.getElementById('step4Back').addEventListener('click', () => navigateToStep(3));
+
+        // Step 2: Accommodation Selection
+        document.querySelectorAll('.accommodation-option').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.accommodation-option').forEach(b => b.classList.remove('border-primary', 'bg-primary/5'));
+                this.classList.add('border-primary', 'bg-primary/5');
+                tripData.accommodation = this.dataset.value;
+            });
+        });
+
+        // Step 3: Destination Selection
+        document.querySelectorAll('.destination-card').forEach(card => {
+            card.addEventListener('click', function () {
+                const destination = this.dataset.destination;
+                const checkbox = this.querySelector('.destination-checkbox');
+                const checkmark = checkbox.querySelector('svg');
+
+                this.classList.toggle('border-primary');
+                this.classList.toggle('bg-primary/5');
+                checkbox.classList.toggle('bg-primary');
+                checkbox.classList.toggle('border-primary');
+                checkmark.classList.toggle('hidden');
+
+                if (tripData.destinations.includes(destination)) {
+                    tripData.destinations = tripData.destinations.filter(d => d !== destination);
+                } else {
+                    tripData.destinations.push(destination);
+                }
+            });
+        });
+
+        // Service Selection
+        document.querySelectorAll('.service-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', function () {
+                if (this.checked) {
+                    tripData.services.push(this.value);
+                } else {
+                    tripData.services = tripData.services.filter(s => s !== this.value);
+                }
+            });
+        });
+
+        // Navigation Helper
+        function navigateToStep(stepNumber) {
+            document.querySelectorAll('.planning-step').forEach(step => step.classList.add('hidden'));
+            document.getElementById(`step${stepNumber}`).classList.remove('hidden');
+
+            document.querySelectorAll('.step-indicator').forEach(indicator => {
+                const indicatorStep = parseInt(indicator.dataset.step);
+                if (indicatorStep === stepNumber) {
+                    indicator.classList.add('active', 'bg-primary', 'text-white');
+                    indicator.classList.remove('bg-border', 'text-text-tertiary');
+                    indicator.nextElementSibling.classList.add('text-primary', 'font-medium');
+                    indicator.nextElementSibling.classList.remove('text-text-tertiary');
+                } else if (indicatorStep < stepNumber) {
+                    indicator.classList.add('bg-success', 'text-white');
+                    indicator.classList.remove('bg-border', 'text-text-tertiary', 'bg-primary');
+                } else {
+                    indicator.classList.remove('active', 'bg-primary', 'text-white', 'bg-success');
+                    indicator.classList.add('bg-border', 'text-text-tertiary');
+                    indicator.nextElementSibling.classList.remove('text-primary', 'font-medium');
+                    indicator.nextElementSibling.classList.add('text-text-tertiary');
+                }
+            });
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Update Summary
+        function updateSummary() {
+            document.getElementById('summaryDuration').textContent = tripData.duration + ' days';
+            document.getElementById('summaryStyle').textContent = tripData.style.charAt(0).toUpperCase() + tripData.style.slice(1);
+            document.getElementById('summaryGroup').textContent = tripData.groupSize;
+            document.getElementById('summaryAccommodation').textContent = tripData.accommodation.charAt(0).toUpperCase() + tripData.accommodation.slice(1);
+
+            const destinationsContainer = document.getElementById('selectedDestinations');
+            if (tripData.destinations.length > 0) {
+                destinationsContainer.innerHTML = tripData.destinations.map(dest => {
+                    const names = {
+                        'bwindi': 'Bwindi Impenetrable Forest',
+                        'queen-elizabeth': 'Queen Elizabeth National Park',
+                        'murchison': 'Murchison Falls National Park',
+                        'kampala': 'Kampala City'
+                    };
+                    return `
+                        <div class="flex items-center gap-3 p-3 bg-white rounded-md">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="#228B22">
+                                <path d="M10 2C6.134 2 3 5.134 3 9C3 13.5 10 20 10 20C10 20 17 13.5 17 9C17 5.134 13.866 2 10 2ZM10 11C8.895 11 8 10.105 8 9C8 7.895 8.895 7 10 7C11.105 7 12 7.895 12 9C12 10.105 11.105 11 10 11Z"/>
+                            </svg>
+                            <span class="font-medium text-text-primary">${names[dest]}</span>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            const activitiesContainer = document.getElementById('includedActivities');
+            const activities = tripData.interests.map(interest => {
+                const activityNames = {
+                    'gorilla-trekking': 'Mountain Gorilla Trekking',
+                    'wildlife-safari': 'Wildlife Game Drives',
+                    'cultural-tours': 'Cultural Village Visits',
+                    'bird-watching': 'Bird Watching Expeditions',
+                    'adventure-sports': 'Adventure Activities',
+                    'photography': 'Photography Sessions'
+                };
+                return `
+                    <div class="flex items-center gap-2">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="#228B22">
+                            <path d="M8 2C4.691 2 2 4.691 2 8C2 11.309 4.691 14 8 14C11.309 14 14 11.309 14 8C14 4.691 11.309 2 8 2ZM7 10L4 7L5.5 5.5L7 7L10.5 3.5L12 5L7 10Z"/>
+                        </svg>
+                        <span class="text-sm text-text-secondary">${activityNames[interest]}</span>
+                    </div>
+                `;
+            }).join('');
+            activitiesContainer.innerHTML = activities;
+        }
+
+        // Save Itinerary
+        document.getElementById('saveItinerary').addEventListener('click', () => {
+            alert('Your itinerary has been saved! A detailed quote will be sent to your email within 24 hours.');
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function () {
+                const answer = this.nextElementSibling;
+                const icon = this.querySelector('.faq-icon');
+
+                answer.classList.toggle('hidden');
+                icon.style.transform = answer.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+        });
+
+        // Get Quote Buttons
+        document.getElementById('getQuoteBtn').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.getElementById('mobileGetQuoteBtn').addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+    <script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+
+</html>
